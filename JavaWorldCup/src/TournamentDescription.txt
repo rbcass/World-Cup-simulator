@@ -1,0 +1,19 @@
+Group stage
+In the group stage, each group is represented by a Group object. Teams are added to a group and the matches
+ are played using the playMatch method. The standings for each group are updated using 
+the updateStandings method, which takes in the winner of the match, and the two teams that played. The top 
+two teams from each group will go on the knockout stage.
+
+Knockout stage
+In the knockout stage, the top two teams from each group are added to a list of teams. The teams are then 
+paired up and the playMatch method is used to determine the winner of each match. The winner of each match 
+is added to the next round and the loser is removed from the tournament. This process continues until there 
+is only one team left, which is the winner of the tournament.
+
+playMatch
+The playMatch method is used to determine the winner of a match between two teams. It calculates the combined
+ attribute score for each team by adding up the attribute scores of all the players on the team, as well as 
+ the manager's attributes. The combined attribute score is used to calculate the probability that each team 
+ will win the match. A random number is then generated and compared to the probability. If the random number
+  is less than the probability, the team with the higher probability is declared the winner. Otherwise, the
+   other team is declared the winner.
